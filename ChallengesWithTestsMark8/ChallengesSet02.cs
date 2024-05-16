@@ -23,7 +23,6 @@ namespace ChallengesWithTestsMark8
                 return false;
             }
 
-            throw new NotImplementedException();
         }
 
         public bool IsNumberEven(int number)
@@ -38,7 +37,6 @@ namespace ChallengesWithTestsMark8
                 return false;
             }
 
-             throw new NotImplementedException();
         }
 
         public bool IsNumberOdd(int num)
@@ -52,13 +50,11 @@ namespace ChallengesWithTestsMark8
             {
                 return true;
             }
-            throw new NotImplementedException();
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
             return numbers.Min() + numbers.Max();
-            throw new NotImplementedException();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -72,7 +68,6 @@ namespace ChallengesWithTestsMark8
             {
                 return str2.Length;
             }
-            throw new NotImplementedException();
         }
 
         public int Sum(int[] numbers)
@@ -83,35 +78,52 @@ namespace ChallengesWithTestsMark8
                 sum = sum + numbers[i];
             }
             return sum;
-
-
-
-
-            throw new NotImplementedException();
         }
 
         public int SumEvens(int[] numbers)
         {
+            int sum = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i] % 2 == 0)
                 {
-
+                    sum = sum + numbers[i];
                 }
             }
-            
-            
-            throw new NotImplementedException();
+            return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            for (int i = 0;  i <  numbers.Count; i++)
+            {
+                sum = sum + numbers[i];
+                i++;
+            }
+
+            if (sum % 2 != 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            int count = 0;
+            for (int i = 0; i < number; i++)
+            {
+                if (i % 2 == 0 & i > 0)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
     }
 }
